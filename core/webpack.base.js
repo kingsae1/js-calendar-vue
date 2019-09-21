@@ -1,6 +1,6 @@
 const path = require('path')
 const webpack = require('webpack')
-const ChromeReloadPlugin  = require('wcer')
+const ChromeExtensionReloader  = require('webpack-chrome-extension-reloader')
 const {cssLoaders, htmlPage} = require('./tools')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
@@ -10,7 +10,7 @@ module.exports = {
     tab: resolve('./tab'),
     popup: resolve('./popup'),
     options: resolve('./options'),
-    content: resolve('./content'), 
+    content: resolve('./content'),
     devtools: resolve('./devtools'),
     background: resolve('./backend'),
     panel: resolve('./devtools/panel'),
@@ -91,13 +91,14 @@ module.exports = {
   },
   plugins: [
     htmlPage('home', 'app', ['tab']),
-    htmlPage('popup', 'popup', ['popup']),
     htmlPage('panel', 'panel', ['panel']),
     htmlPage('devtools', 'devtools', ['devtools']),
     htmlPage('options', 'options', ['options']),
-    htmlPage('background', 'background', ['background']),
+    htmlPage('popup', 'popup', ['manifest', 'vendor', 'popup']),
+    htmlPage('background', 'background', ['manifest', 'vendor', 'background']),
+
     new CopyWebpackPlugin([{ from: path.join(__dirname, '..', 'static') }]),
-    new ChromeReloadPlugin({
+    new ChromeExtensionReloader({
       port: 9090,
       manifest: path.join(__dirname, '..', 'src', 'manifest.js')
     }),
