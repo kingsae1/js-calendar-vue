@@ -1,1 +1,2 @@
-console.log('content-script!')
+/* eslint-disable no-console */
+console.log("content-script!");

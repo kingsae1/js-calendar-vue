@@ -1,7 +1,5 @@
 <template>
-  <div>
-    devtools
-  </div>
+  <div>devtools</div>
 </template>
 
 <script>
