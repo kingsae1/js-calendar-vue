@@ -1,5 +1,7 @@
-<template lang="pug">
-    div tab
+<template>
+    <div>
+        main
+    </div>
 </template>
 <script>
   export default {
@@ -11,7 +13,7 @@
     methods: { }
   }
 </script>
-<style lang="scss">
+<style>
   div {
     color: blue
   }
