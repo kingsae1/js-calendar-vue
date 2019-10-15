@@ -2,8 +2,8 @@
 
 module.exports = {
   root: true,
-  parser: "babel-eslint",
   parserOptions: {
+    parser: "babel-eslint",
     sourceType: "module"
   },
   globals: {
@@ -15,9 +15,9 @@ module.exports = {
   },
   // https://github.com/standard/standard/blob/master/docs/RULES-en.md
   // extends: 'standard',
-  extends: ["airbnb", "plugin:prettier/recommended"],
+  extends: ["eslint:recommended", "prettier"],
   // required to lint *.vue files
-  plugins: ["html"],
+  plugins: ["html", "vue"],
   // add your custom rules here
   rules: {
     // allow paren-less arrow functions
@@ -25,6 +25,7 @@ module.exports = {
     // allow async-await
     "generator-star-spacing": 0,
     // allow debugger during development
-    "no-debugger": process.env.NODE_ENV === "production" ? 2 : 0
+    "no-debugger": process.env.NODE_ENV === "production" ? 2 : 0,
+    camelcase: ["error", { properties: "never" }]
   }
 };
