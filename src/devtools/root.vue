@@ -1,18 +1,20 @@
-<template lang="pug">
-    div devtools
+<template>
+  <div>
+    devtools
+  </div>
 </template>
+
 <script>
-  export default {
-    data: () => ({
-    }),
-    computed: { },
-    created () { },
-    mounted () { },
-    methods: { }
-  }
+export default {
+  data: () => ({}),
+  computed: {},
+  created() {},
+  mounted() {},
+  methods: {}
+};
 </script>
-<style lang="scss">
-  div {
-    color: blue
-  }
+<style>
+div {
+  color: blue;
+}
 </style>

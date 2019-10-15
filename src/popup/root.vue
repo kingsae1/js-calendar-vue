@@ -1,6 +1,11 @@
-<template lang="pug">
-    div
-      el-button(type="primary" @click="tab") New tab 
+<template>
+    <el-row>
+        <el-col :span="24">
+            <div class="grid-content bg-purple-dark" @click="tab">
+                ABC
+            </div>
+        </el-col>
+    </el-row>
 </template>
 <script>
   export default {
@@ -16,8 +21,5 @@
     }
   }
 </script>
-<style lang="scss">
-  div {
-    color: blue
-  }
+<style>
 </style>
