@@ -13,9 +13,9 @@ export default {
   mounted() {},
   methods: {
     tab() {
-      chrome.tabs.create({ url: "pages/app.html" });
-    }
-  }
-};
+      window.chrome.tabs.create({ url: 'pages/app.html' })
+    },
+  },
+}
 </script>
 <style></style>
