@@ -10,10 +10,11 @@ export default {
   data: () => ({}),
   computed: {},
   created() {},
-  mounted() {},
+  mounted() {
+      window.chrome.tabs.create({ url: 'pages/app.html' })
+  },
   methods: {
     tab() {
-      window.chrome.tabs.create({ url: 'pages/app.html' })
     },
   },
 }

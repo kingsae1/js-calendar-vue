@@ -22,8 +22,9 @@ module.exports = {
   ],
   browser_action: {
     default_title: 'title',
+    // 내부적으로 TAB을 바로 실행하도록 설정
     default_popup: 'pages/popup.html',
-  },
+},
   background: {
     persistent: false,
     page: 'pages/background.html',

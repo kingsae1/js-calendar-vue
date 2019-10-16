@@ -1,5 +1,5 @@
 <template>
-  <div>main</div>
+  <div>Main TAB</div>
 </template>
 <script>
 export default {
